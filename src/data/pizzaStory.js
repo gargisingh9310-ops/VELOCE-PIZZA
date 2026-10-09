@@ -1,0 +1,98 @@
+/**
+ * Story chapters for the main 240-frame Pizza Canvas Hero
+ * Synchronized with scroll progression through the frame sequence.
+ */
+export const PIZZA_CHAPTERS = [
+  {
+    id: 'dough',
+    start: 0,
+    end: 0.20,
+    number: '01',
+    title: 'THE DOUGH',
+    subtitle: 'WILD STARTER • 72H COLD FERMENT',
+    description: 'Slow cold fermentation develops an airy, cloud-like cornicione with deep complex aromas.',
+  },
+  {
+    id: 'san-marzano',
+    start: 0.20,
+    end: 0.45,
+    number: '02',
+    title: 'SAN MARZANO',
+    subtitle: 'VOLCANIC SOIL CRUSH',
+    description: 'Bright acidity and natural sweetness from the sun-drenched mineral soils of Mount Vesuvius.',
+  },
+  {
+    id: 'fior-di-latte',
+    start: 0.45,
+    end: 0.68,
+    number: '03',
+    title: 'FIOR DI LATTE',
+    subtitle: 'AGEROLA MORNING MILK',
+    description: 'Fresh, creamy and delicate. Melts into silky pools without watering down the crisp crust.',
+  },
+  {
+    id: 'fresh-basil',
+    start: 0.68,
+    end: 0.85,
+    number: '04',
+    title: 'FRESH BASIL',
+    subtitle: 'SWEET GENOVESE DOP',
+    description: 'Tender aromatic baby leaves laid raw the moment the pie leaves the 900°F fire.',
+  },
+  {
+    id: 'the-fire',
+    start: 0.85,
+    end: 1.00,
+    number: '05',
+    title: 'THE FIRE',
+    subtitle: '900°F VOLCANIC STONE',
+    description: 'Blistered leopard spots in 60 seconds. Crisp exterior, pillowy interior harmony.',
+  },
+];
+
+export const PURE_INGREDIENTS = [
+  {
+    id: 'san-marzano',
+    number: '01',
+    name: 'SAN MARZANO',
+    subtitle: 'VOLCANIC SOIL CRUSH',
+    tastingNotes: ['BRIGHT ACIDITY', 'NATURAL SWEETNESS'],
+    description: 'Hand-harvested in the volcanic soils of Agro Sarnese-Nocerino at the foot of Mount Vesuvius. Crushed raw to preserve pure acidity and vibrant sweetness.',
+    origin: 'Campania, Italy',
+    elevation: 'Vesuvius Slope • 180m',
+    image: '/assets/san_marzano.jpg',
+  },
+  {
+    id: 'fior-di-latte',
+    number: '02',
+    name: 'FIOR DI LATTE',
+    subtitle: 'AGEROLA MORNING MILK',
+    tastingNotes: ['SOFT TEXTURE', 'FRESH MILKY FINISH'],
+    description: 'Handcrafted daily from raw Monti Lattari milk. Stretched fresh and aged just enough to melt into silky pools without compromising crust crispness.',
+    origin: 'Agerola, Napoli',
+    elevation: 'Monti Lattari • 650m',
+    image: '/assets/fior_di_latte.jpg',
+  },
+  {
+    id: 'fresh-basil',
+    number: '03',
+    name: 'FRESH BASIL',
+    subtitle: 'SWEET GENOVESE DOP',
+    tastingNotes: ['AROMATIC', 'GREEN FRESHNESS'],
+    description: 'Tender baby leaves of protected origin Genovese basil, harvested at dawn and laid raw onto the blistering pie right out of the oven.',
+    origin: 'Liguria Coast',
+    elevation: 'Mediterranean Estate',
+    image: '/assets/fresh_basil.jpg',
+  },
+  {
+    id: 'olive-oil',
+    number: '04',
+    name: 'EXTRA VIRGIN OLIVE OIL',
+    subtitle: 'FIRST COLD EXTRACTION',
+    tastingNotes: ['THE FINAL TOUCH', 'PEPPERY GOLD'],
+    description: 'Single-estate Coratina olives cold-pressed within four hours of harvest. Offers peppery golden brilliance, balanced bitterness, and grassy depth.',
+    origin: 'Puglia, Italy',
+    elevation: 'Century-Old Groves',
+    image: '/assets/olive_oil.jpg',
+  },
+];

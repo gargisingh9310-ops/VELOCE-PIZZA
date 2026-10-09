@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --cream: #F6F0E5;
+    --ivory: #FBF8F2;
+    --paper: #FFFDF9;
+    --terracotta: #B9573F;
+    --clay: #914332;
+    --wood: #7A523A;
+    --olive: #66705A;
+    --charcoal: #25231F;
+    --muted: #8C8378;
+    --border: rgba(37, 35, 31, 0.12);
+
+    --bg-main: var(--cream);
+    --text-primary: var(--charcoal);
+    --text-secondary: var(--muted);
+    --accent-terracotta: var(--terracotta);
+    --accent-terracotta-dark: var(--clay);
+    --border-subtle: var(--border);
+    --border-light: rgba(37, 35, 31, 0.06);
+    --paper-white: #FFFFFF;
+    --paper-warm: var(--paper);
+  }
+
+  html, body, #root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom minimal warm scrollbar */
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F7F4EF;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(23, 23, 23, 0.2);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B9573F;
+  }
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Typography Enhancements */
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-editorial {
+  font-family: 'Italiana', serif;
+}
+
+.font-serif-luxury {
+  font-family: 'Cinzel', serif;
+}
+
+.font-mono-tech {
+  font-family: 'Space Mono', monospace;
+}
+
+/* Editorial Card & Section Styling */
+.card-editorial {
+  background-color: #FFFDF9;
+  border: 1px solid rgba(23, 23, 23, 0.09);
+  box-shadow: 0 16px 45px rgba(60, 42, 30, 0.05);
+}
+
+.card-editorial:hover {
+  box-shadow: 0 22px 60px rgba(60, 42, 30, 0.09);
+  border-color: rgba(185, 87, 63, 0.3);
+}
+
+/* Scene Isolation System */
+.scene-isolated {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Fluid responsive typography utilities */
+.heading-hero {
+  font-size: clamp(2.5rem, 6.5vw, 6rem);
+  line-height: 0.92;
+}
+
+.heading-display {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.heading-section {
+  font-size: clamp(1.75rem, 3.8vw, 3.25rem);
+  line-height: 1.0;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom pointer cursor classes */
+@media (pointer: fine) {
+  body.has-custom-cursor {
+    cursor: none;
+  }
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor [role="button"],
+  body.has-custom-cursor input,
+  body.has-custom-cursor select,
+  body.has-custom-cursor textarea {
+    cursor: none;
+  }
+}
+
+/* Subtle Film Grain Noise Overlay */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
